@@ -1,7 +1,8 @@
 <?php
-if (session_id() == '') {
-    session_start();
-}
+
+session_start();
+
+
 
 // if (isset($_SESSION['user_email'])) {
 // 	if ($_SESSION['user_type'] != 1) {
@@ -72,15 +73,24 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
     <script src="js/jquery.main.js" defer></script>
 
-    <?php if ($_SESSION['user_type'] != 1) {
+    <?php if (!isset($_SESSION['user_type'])) {
     ?>
         <style>
             .info-section .right-content {
                 width: 100.5% !important;
-              
+
             }
         </style>
-    <?php } ?>
+    <?php } else if ($_SESSION['user_type'] != 1) {
+    ?>
+        <style>
+            .info-section .right-content {
+                width: 100.5% !important;
+
+            }
+        </style>
+    <?php
+    } ?>
 </head>
 
 <body>
@@ -91,7 +101,7 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
                 <div class="content-block">
 
 
-                    <?php if ($_SESSION['user_type'] == 1) {
+                    <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) {
 
 
                     ?>
@@ -107,7 +117,7 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
                                 <button type="submit">
                                     <img src="images/search-img.png" alt="Image Description">
                                 </button>
-                                <input class="input-control" type="search" placeholder="cerca barbieri">
+                                <input class="input-control" type="text" id="search-bar" oninput="searchBarber()" placeholder="Search Barber">
                             </form>
 
                             <div id="barbers-div">
@@ -156,63 +166,7 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
                                 ?>
                             </div>
 
-                            <!-- <div class="header">
-                                <div class="user-col">
-                                    <div class="img-box">
-                                        <img src="images/img04.jpg" width="122" height="138" alt="img description">
-                                    </div>
-                                    <div class="text-box">
-                                        <strong class="title">Paolo Novembre</strong>
-                                        <ul class="star-rating">
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li>150</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="text-col">
-                                    <strong class="text"><i class="icon-map-marker"></i> 1,2 Km <span>Da te</span></strong>
-                                </div>
-                            </div>
-                            <div class="header">
-                                <div class="user-col">
-                                    <div class="img-box">
-                                        <img src="images/img05.jpg" width="122" height="138" alt="img description">
-                                    </div>
-                                    <div class="text-box">
-                                        <strong class="title">Fabio Ceri</strong>
-                                        <ul class="star-rating">
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li>1231</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="text-col">
-                                    <strong class="text"><i class="icon-map-marker"></i> 2,5 Km <span>Da te</span></strong>
-                                </div>
-                            </div>
-                            <div class="header">
-                                <div class="user-col">
-                                    <div class="img-box">
-                                        <img src="images/img02.jpg" width="122" height="138" alt="img description">
-                                    </div>
-                                    <div class="text-box">
-                                        <strong class="title">Marco Zaccaria </strong>
-                                        <ul class="star-rating">
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li><img src="images/icon-star.png" width="16" height="16" alt="img description"></li>
-                                            <li>150</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="text-col">
-                                    <strong class="text"><i class="icon-map-marker"></i> 0.8 Km <span>Da te</span></strong>
-                                </div>
-                            </div> -->
+
                         </div>
                         <aside class="right-bar no-border pt-0">
                             <div class="radius-away">
@@ -231,7 +185,7 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
                             <ul class="filters">
                                 <li>
                                     <input type="radio" id="Barbieri" name="select" checked>
-                                    <label for="Barbieri" class="filter">Barbieri</label>
+                                    <label for="Barbieri" class="filter">Barbers</label>
                                     <span class="circle"></span>
                                 </li>
                                 <li>
@@ -254,13 +208,12 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
 
         const radius = document.getElementById("radius").value;
 
-
-
         $.ajax({
             type: "POST",
             url: "search_barbers.php",
             data: {
-                radius: radius
+                radius: radius,
+                radio: true
             },
             cache: false,
             success: function(data) {
@@ -270,6 +223,33 @@ if (isset($_POST["search_barbers"]) || isset($_SESSION["lat"])) {
                 $("#barbers-div").html(data);
             }
         });
+    }
+
+    function searchBarber() {
+
+        const radius = document.getElementById("radius").value;
+
+        const barber_name = document.getElementById("search-bar").value;
+
+
+        $.ajax({
+            type: "POST",
+            url: "search_barbers.php",
+            data: {
+                radius: radius,
+                barber_name: barber_name,
+                searchbar: true,
+            },
+            cache: false,
+            success: function(data) {
+                // $("#resultarea").text(data);
+                console.log(data);
+
+                $("#barbers-div").html(data);
+            }
+        });
+
+
     }
 </script>
 
