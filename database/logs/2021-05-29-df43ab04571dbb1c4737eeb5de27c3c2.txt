@@ -1,0 +1,79 @@
+Time : 21:28:41
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:38
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:24
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:24
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:23
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:22
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:21
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:20
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:20
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:28:19
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:21:48
+SQLSTATE[HY000] [1049] Unknown database 'barber_db'
+
+Time : 21:21:41
+SQLSTATE[HY000] [1049] Unknown database 'barber_db'
+
+Time : 21:21:39
+SQLSTATE[HY000] [1049] Unknown database 'barber_db'
+
+Time : 21:21:39
+SQLSTATE[HY000] [1049] Unknown database 'barber_db'
+
+Time : 21:21:12
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:21:12
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:55
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:55
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:55
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:54
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:54
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:54
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:20:54
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 21:17:56
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+
+Time : 08:55:53
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : UPDATE `users` SET `name` = ? WHERE `email` = ?
+
+Time : 08:55:20
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_photo' in 'field list'
+Raw SQL : UPDATE `barber` SET `description` = ?, `profile_photo` = ?, `cover_photo` = ? WHERE `userid` = ?

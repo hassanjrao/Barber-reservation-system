@@ -1,0 +1,83 @@
+Time : 09:25:15
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 08:42:48
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 08:35:51
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 08:14:05
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 08:03:47
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 07:49:23
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 07:36:15
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.bankAccount' doesn't exist
+Raw SQL : INSERT IGNORE INTO `bankAccount`(`bankName`, `accountTitle`, `ibanNumber`, `userid`) VALUES (?, ?, ?, ?)
+
+Time : 06:35:00
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.workPhotos' doesn't exist
+Raw SQL : SELECT * FROM workPhotos WHERE photo=?
+
+Time : 06:32:10
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` WHERE `userid` = ? AND `type` = ?
+
+Time : 06:31:53
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` WHERE `userid` = ? AND `type` = ?
+
+Time : 06:31:50
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` WHERE `userid` = ? AND `type` = ?
+
+Time : 06:31:47
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` WHERE `userid` = ? AND `type` = ?
+
+Time : 06:31:04
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` WHERE `userid` = ? AND `type` = ?
+
+Time : 06:31:01
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` WHERE `userid` = ? AND `type` = ?
+
+Time : 06:28:42
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.workPhotos' doesn't exist
+Raw SQL : SELECT * FROM workPhotos WHERE userid=?
+
+Time : 06:27:36
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` where userid=?
+
+Time : 06:25:28
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` where userid=?
+
+Time : 06:25:20
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` where userid=?
+
+Time : 06:25:07
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` where userid=?
+
+Time : 06:25:05
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` where userid=?
+
+Time : 06:24:50
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'olactum8_rao.cuttingType' doesn't exist
+Raw SQL : SELECT * FROM `cuttingType` where userid=?

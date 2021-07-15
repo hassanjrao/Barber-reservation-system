@@ -1,0 +1,3 @@
+Time : 19:14:46
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'barber.radius' doesn't exist
+Raw SQL : UPDATE `radius` SET `radius` = ? WHERE `userid` = ?

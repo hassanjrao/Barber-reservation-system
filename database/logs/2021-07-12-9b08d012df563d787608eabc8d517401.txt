@@ -1,0 +1,14 @@
+Time : 22:06:11
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Raw SQL : SELECT * FROM users WHERE id=?
+
+Time : 21:53:48
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lat' in 'field list'
+Raw SQL : SELECT * , (3956 * 2 * ASIN(SQRT( POWER(SIN(( 30.242085 - lat) *  pi()/180 / 2), 2) +COS( 30.242085 * pi()/180) * COS(lat * pi()/180) * POWER(SIN(( 71.5661717 - lng) * pi()/180 / 2), 2) ))) as distance  
+    from users
+    having  distance <= ? and user_type=?
+    order by distance
+
+Time : 16:33:36
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : UPDATE `address` SET `address` = ?, `city`=?,`lat`=?, `lng`=?, `postalCode`=? WHERE `userid` = ?
